@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1521651848 source:c:\users\daniel willians\desktop\danielwillians-listafuncoes\exercicio 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+
+1521807331 source:f:\daniel willians ignacio de souza\programa1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+
