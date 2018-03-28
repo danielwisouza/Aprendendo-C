@@ -1,0 +1,12 @@
+Protetipação??
+
+A string toda 
+
+strcmp = Comparar Strings
+
+Um caracter pode-se usar 
+
+C[0] == J[0]
+
+
+.c é imprementação o .h
