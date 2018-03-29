@@ -20,9 +20,9 @@ int main()
     printf("\nVogais nome 1: %i",conta_vogais(s[0]));
     printf("\nVogais nome 2: %i",conta_vogais(s[1]));
     printf("\nVogais nome 3: %i",conta_vogais(s[2]));
-    substitui_vogais_por_asterisco(s[0],letra);
-    substitui_vogais_por_asterisco(s[1],letra);
-    substitui_vogais_por_asterisco(s[2],letra);
+    substitui_vogais_por_asterisco(s[0]);
+    substitui_vogais_por_asterisco(s[1]);
+    substitui_vogais_por_asterisco(s[2]);
     conta_consoante(s[0]);
     return 0;
 }

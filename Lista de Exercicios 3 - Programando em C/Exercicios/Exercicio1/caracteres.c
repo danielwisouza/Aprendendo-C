@@ -39,7 +39,7 @@ int conta_vogais (char s[])
   return qtde;
 }
 
-void substitui_vogais_por_asterisco(char s[],char c)
+void substitui_vogais_por_asterisco(char s[])
 {
   int i;
   for(i=0;s[i]!='\0';i++)
