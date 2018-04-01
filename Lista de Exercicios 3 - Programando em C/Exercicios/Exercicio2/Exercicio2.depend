@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1522602710 source:c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
