@@ -1,14 +1,16 @@
 # depslib dependency file v1.0
-1522634765 source:c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.c
+1522637089 source:c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<math.h>
 	"calculo.h"
 
-1522634765 c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.h
+1522636051 c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.h
 
-1522634772 source:c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio3\main.c
+1522637119 source:c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio3\main.c
 	<stdio.h>
 	<stdlib.h>
+	<math.h>
+	"calculo.h"
 
