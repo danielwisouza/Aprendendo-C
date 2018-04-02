@@ -18,6 +18,9 @@ int main()
     xp, yp, zp = (0,4,-1);
     //Coordenadas Nava
     x[0],y[0],z[0] = (5,4,-1);x[1],y[1],z[1] = (4,4,-1);x[2],y[2],z[2] = (3,4,-1);x[3],y[3],z[3] = (2,4,-1);x[4],y[4],z[4] = (1,4,-1);
+    distantcia_duas_dimensoes1(xp,yp,zp,x,y,z);
+
+
     system("pause");
     return 0;
 }
