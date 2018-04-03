@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1522776903 source:c:\users\daniel willians\documents\github\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"matriz.h"
+
+1522776646 c:\users\daniel willians\documents\github\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio4\matriz.h
+
+1522776966 source:c:\users\daniel willians\documents\github\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio4\matriz.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"matriz.h"
+
