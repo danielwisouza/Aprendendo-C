@@ -4,11 +4,8 @@
 #include <math.h>
 #include "calculo.h"
 
-//a) distância entre dois pontos com duas dimensões
-//b) distância entre dois pontos com três dimensões
-//c) distância entre dois pontos com uma dimensão
 
-float espaço_unidimensional() (int xp,int x[],int i)
+float espaço_unidimensional(int xp,int x[],int i)
 {
     float tot=0;
     //d = |xp - x[i]|
