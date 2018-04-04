@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "matriz.h"
+#include "biblioteca.h"
 
 int main()
 {
-    int coluna=1,linha=2;
+    int coluna=4,linha=4;
     int a[linha][coluna], b[linha][coluna];
     int i,e;
     char op;
@@ -15,14 +15,13 @@ int main()
         for (e=0; e <coluna; e=e+1){
         scanf("%i",&a[i][e]);
     }}
-    //system("cls");
+    system("cls");
     printf("Insira os Elementos da Matriz 4 X 4: Matriz 2\n");
     for (i=0; i <linha; i=i+1){
         for (e=0; e <coluna; e=e+1){
         scanf("%i",&b[i][e]);
     }}
-    //system("cls");
-    printf("%i", a[0][1]);
+    system("cls");
     //exibir(a,b);
     do
     {
@@ -37,11 +36,12 @@ int main()
      switch(op)
      {
         case 'a':{system("cls");
-                printf("\nOpcao A Maior Numero ");
+                printf("\nOpcao A Somar ");
+                adicao(a,b);
                 break;
         }
         case 'b':{system("cls");
-                printf("\nOpcao B Menor Numero ");
+                printf("\nOpcao B Subtrair");
                 break;
         }
          case 's':{system("cls");
