@@ -60,12 +60,15 @@ int main()
     float tridimensional[5]={ac,bc,cc,dc,ec};
     printf("\n---------- Resultado Espaco Tridimencional ----------");
     printf("\nNave 0: %.2f\nNave 1: %.2f\nNave 2: %.2f\nNave 3: %.2f\nNave 4: %.2f\n",tridimensional[0],tridimensional[1],tridimensional[2],tridimensional[3],tridimensional[4]);
+<<<<<<< HEAD
 
 
     printf("\n---------- Resultado Espaco Tridimencional ----------");
     printf("\n---------- Ordem das naves ----------");
     menorTRI(tridimensional);
 
+=======
+>>>>>>> 7801ebb3426d238dfd4cf451de32710693c6e826
 
     system("pause");
     return 0;
