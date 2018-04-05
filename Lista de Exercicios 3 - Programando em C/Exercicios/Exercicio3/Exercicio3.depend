@@ -30,22 +30,35 @@
 	<math.h>
 	"calculo.h"
 
-<<<<<<< HEAD
-1522806489 source:g:\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.c
+1522891018 source:g:\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<math.h>
 	"calculo.h"
 
-1522769594 g:\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.h
+1522890694 g:\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.h
 
-1522806515 source:g:\lista de exercicios 3 - programando em c\exercicios\exercicio3\main.c
+1522890694 source:g:\lista de exercicios 3 - programando em c\exercicios\exercicio3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<math.h>
 	"calculo.h"
 
-=======
->>>>>>> 7801ebb3426d238dfd4cf451de32710693c6e826
+1522807226 source:h:\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"calculo.h"
+
+1522769594 h:\lista de exercicios 3 - programando em c\exercicios\exercicio3\calculo.h
+
+1522806515 source:h:\lista de exercicios 3 - programando em c\exercicios\exercicio3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"calculo.h"
+
