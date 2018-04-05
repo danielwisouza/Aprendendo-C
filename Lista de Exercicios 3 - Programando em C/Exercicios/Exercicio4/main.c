@@ -13,19 +13,19 @@ int main()
     printf("Insira os Elementos da Matriz 4 X 4 numeros: Matriz 1\n");
     for (i=0; i <linha; i=i+1){
         for (e=0; e <coluna; e=e+1){
-        printf("Insira os Elementos [%i][%e] da Matriz \n",&i,&e);
+        printf("Insira os Elementos [%i][%i] da Matriz: ",i,e);
         scanf("%i",&a[i][e]);
     }}
     //system("cls");
     printf("Insira os Elementos da Matriz 4 X 4: Matriz 2\n");
     for (i=0; i <linha; i=i+1){
         for (e=0; e <coluna; e=e+1){
-        printf("Insira os Elementos [%i][%e] da Matriz \n",&i,&e);
+        printf("Insira os Elementos [%i][%i] da Matriz: ",i,e);
         scanf("%i",&b[i][e]);
     }}
 
     //system("cls");
-    printf("%i", a[0][1]);
+    //printf("%i", a[0][1]);
     //exibir(a,b);
     do
     {
