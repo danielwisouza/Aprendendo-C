@@ -28,7 +28,7 @@ int main()
      {
         case 'a':{system("cls");
                 printf("\nOpcao A Imprimir os nomes em ordem alfabetica\n");
-                printf("%i",nome[0][0]);
+                printf("%i",nome[0][0]); m
                 break;
         }
         case 'b':{system("cls");
