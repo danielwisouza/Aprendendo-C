@@ -28,8 +28,19 @@ int main()
      {
         case 'a':{system("cls");
                 printf("\nOpcao A Imprimir os nomes em ordem alfabetica\n");
-                printf("%i",nome[0][0]); m
+                //printf("%i",tolower(nome[0][0]));
+                int x,cont;
+                for (i=0; i<3;i++){
+                    cont=2;
+                    for (x=0; x<3;x++){
+                        if ((tolower(nome[i][0])) < (tolower(nome[x][0]))){
+                            cont--;
+                        }
+                    }
+                printf("\n%s",nome[cont]);
+                }
                 break;
+
         }
         case 'b':{system("cls");
                 printf("\nOpcao B Imprimir os nomes em letras maiusculas\n");
