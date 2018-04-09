@@ -1,3 +1,5 @@
+Sensacional, o ovento foi inexspricavel, muito enriquecedor, parabens a todos evolvidos.
+
 Tarefa: Bibliotecas, Funções, Matrizes e Vetores
 Faça os exercícios descritos, usando linguagem de programação C. Nomeie cada um dos programas como programa1, programa 2, etc. Em seguida, poste um arquivo chamado seu_nome.zip, contendo os códigos, isto é, programa1.c, programa 2.c..., bem como arquivos de texto. Importante: Não esqueça de acrescentar ao final de cada código da função main uma das instruções:
 

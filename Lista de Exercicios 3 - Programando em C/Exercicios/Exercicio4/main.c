@@ -68,7 +68,6 @@ int main()
                 printf("\n"); // para pular linha quando terminar a coluna
                 }
                 break;
-                break;
         }
          case 's':{system("cls");
                 printf("\nSaindo.. ");
