@@ -39,15 +39,23 @@ int main()
                     }
                 printf("\n%s",nome[cont]);
                 }
+                //Arrumar aqui Daniel, se nome com segunda letra igual bug
                 break;
 
         }
         case 'b':{system("cls");
                 printf("\nOpcao B Imprimir os nomes em letras maiusculas\n");
+                for (i=0; i<3;i++){
+                    printf("\n%s",strupr(nome[i]));
+                    }
         }
                 break;
-        case 'C':{system("cls");
+        case 'c':{system("cls");
+                int id=0;
                 printf("\nOpcao C Informar apenas um nome\n");
+                printf("Digite o identificador 0, 1 ou 2:");
+                scanf("%i",&id);
+                printf("\n%s",nome[id]);
                 break;
         }
          case 's':{system("cls");
