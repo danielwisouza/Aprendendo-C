@@ -1,0 +1,1 @@
+void conta(char s);
