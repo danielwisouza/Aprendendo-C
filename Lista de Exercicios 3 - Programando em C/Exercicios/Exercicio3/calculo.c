@@ -35,10 +35,19 @@ float espaco_tridimensional(int xp,int yp,int zp,int x[],int y[], int z[],int i)
     return tot;
 }
 
-//void menorUNI(float unidimensional[])
-//{
-//  int i = 0,mn=numero[0];
-//  for (i; i <5; i=i+1){
-//        if (numero[i] < mn)mn = (numero[i]);}
-//    printf("Maior numero %i",mn);
-//}
+void menorTRI(float tridimensional[])
+{
+  int i = 0,e = 0,cont;
+  int ordem[5]={0,0,0,0,0};
+  for (i=0; i <5; i=i+1){
+  cont = 4;
+    for (e=0; e <5; e=e+1){
+        if (tridimensional[i] < tridimensional[e]){
+            cont--;
+            }
+    }
+    ordem[cont]=i;
+  }
+    printf("%i, %i, %i, %i, %i",ordem[0],ordem[1],ordem[2],ordem[3],ordem[4]);
+  }
+

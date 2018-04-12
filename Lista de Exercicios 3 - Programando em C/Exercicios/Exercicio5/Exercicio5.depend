@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1523216818 source:c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio5\principal.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"principal.h"
+
+1523217175 c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio5\principal.h
+
+1523245811 source:c:\users\lusca\desktop\projetos\aprendendo-c\lista de exercicios 3 - programando em c\exercicios\exercicio5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<string.h>
+

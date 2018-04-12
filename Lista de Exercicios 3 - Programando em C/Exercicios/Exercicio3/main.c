@@ -7,9 +7,24 @@
 int main()
 {
     int xp, yp, zp,i;
-    int x[5]={5,4,3,2,1};
-    int y[5]={4,4,4,4,4};
-    int z[5]={-1,-1,-1,-1,-1};
+    int x[5]={0,0,0,0,0};
+    int y[5]={0,0,0,0,0};
+    int z[5]={0,0,0,0,0};
+    printf("Insira os valore de 'X' para as 5 coordenadas.\n");
+    for (i=0; i <5; i=i+1){
+        scanf("\n%i",&x[i]);
+    }
+    system("cls");
+    printf("Insira os valore de 'Y' para as 5 coordenadas.\n");
+    for (i=0; i <5; i=i+1){
+        scanf("\n%i",&y[i]);
+    }
+    system("cls");
+    printf("Insira os valore de 'Z' para as 5 coordenadas.\n");
+    for (i=0; i <5; i=i+1){
+        scanf("\n%i",&z[i]);
+    }
+    system("cls");
     float aa,ba,ca,da,ea;
     float ab,bb,cb,db,eb;
     float ac,bc,cc,dc,ec;
@@ -45,6 +60,12 @@ int main()
     float tridimensional[5]={ac,bc,cc,dc,ec};
     printf("\n---------- Resultado Espaco Tridimencional ----------");
     printf("\nNave 0: %.2f\nNave 1: %.2f\nNave 2: %.2f\nNave 3: %.2f\nNave 4: %.2f\n",tridimensional[0],tridimensional[1],tridimensional[2],tridimensional[3],tridimensional[4]);
+
+
+    printf("\n---------- Resultado Espaco Tridimencional ----------");
+    printf("\n---------- Ordem das naves ----------");
+    menorTRI(tridimensional);
+
 
     system("pause");
     return 0;
