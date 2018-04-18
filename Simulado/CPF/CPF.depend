@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1524078361 source:c:\users\lusca\desktop\projetos\aprendendo-c\simulado\cpf\main.c
+	<stdio.h>
+	<stdlib.h>
+
