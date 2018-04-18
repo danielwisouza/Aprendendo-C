@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1523475149 source:c:\users\lusca\downloads\simulado\exercicio1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1523495940 source:g:\simulado\exercicio1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
