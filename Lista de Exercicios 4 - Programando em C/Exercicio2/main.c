@@ -65,6 +65,7 @@ void listar_ano()
         }
     }
 }
+
 void listar_ano_antes()
 {
     int i,busca;
