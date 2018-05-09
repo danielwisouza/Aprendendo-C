@@ -1,0 +1,172 @@
+/*inclusão de bibliotecas*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <ctype.h>
+#include <conio.h>
+#include <string.h>
+/*definição de constantes, cores */
+#define BLACK 0
+#define BLUE 1
+#define GREEN 2
+#define CYAN 3
+#define RED 4
+#define MAGENTA 5
+#define BROWN 6
+#define LIGHT_GRAY 7
+#define DARK_GRAY 8
+#define LIGHT_BLUE 9
+#define LIGHT_GREEN 10
+#define LIGHT_CYAN 11
+#define LIGHT_RED 12
+#define LIGHT_MAGENTA 13
+#define YELLOW 14
+#define WHITE 15
+
+/* mudar fundo e texto com system
+0 = Black
+1 = Blue
+2 = Green
+3 = Aqua
+4 = Red
+5 = Purple
+6 = Yellow
+7 = White
+8 = Gray
+9 = Light Blue
+A = Light Green
+B = Light Aqua
+C = Light Red
+D = Light Purple
+E = Light Yellow
+F = Bright White
+
+
+/* move cursor na tela conforme coordenada recebida, sem retorno de valor */
+void gotoxy(int coluna, int linha)
+{
+      COORD point;
+      point.X = coluna;
+      point.Y = linha;
+      SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), point);
+}
+/*constantemente lê coordenadas e chama a função gotoxy*/
+void rastrear()
+{    /* declaração de variáveis*/
+     int x,y;
+     char mov;
+     /*meio da tela*/
+     x=40;
+     y=12;
+     /*orientações para o movimento*/
+     printf("\n n- Norte");
+     printf("\n s- Sul");
+     printf("\n l- Leste");
+     printf("\n o- Oeste");
+     printf("\n f - fim");
+     /*laço infinito*/
+     while(1) 
+     {/*chama a função para movimentar cursor para a posição indicada*/
+        gotoxy(x,y);
+       /*imprime o caracter*/
+       putch(169);
+       /*lê direção do movimento desejado*/
+       mov=getch();
+       /*Conforme direção desejada, uma posição é modificada ou saída*/
+       switch(mov)
+       {
+                  case 'n': if(y>1) y--; break;
+                  case 's': if(y<24) y++; break;
+                  case 'o': if(x>1) x--;break;
+                  case 'l':if(x<80) x++; break;
+                  case 'f': return;
+                  default:break;
+
+       }
+   }
+
+}
+/* Desenha tabuleiro colorido e sai do programa */
+void mudarCorFundo(char n)
+{
+    char col[9];
+    col[0]='C';
+    col[1]='O';
+    col[2]='L';
+    col[3]='O';
+    col[4]='R';
+    col[5]=' ';
+    col[6]=n;
+    col[7]='7';
+    col[8]='\0';
+   system(col); //col[6] é fundo e col[6] é texto
+   system("cls");
+}
+void mudarCorTexto(char n)
+{
+   char col[9];
+    col[0]='C';
+    col[1]='O';
+    col[2]='L';
+    col[3]='O';
+    col[4]='R';
+    col[5]=' ';
+    col[6]='0';
+    col[7]=n;
+    col[8]='\0';
+   system(col); //col[6] é fundo e col[6] é texto
+   system("cls");
+}
+/* recebe lado do quadrado e retorna  o perimetro */
+int periQuad (int k)
+{
+    int p;
+    p=4*k;
+    return p;
+}
+/*função principal  */
+main()
+{ /* declaração de variáveis*/
+      int tamanho, t,op;
+      do
+      {
+          /*menu*/
+          system("cls");
+          printf("\n \n****************MENU*********************************");
+          printf("\n \n");
+          printf("\n 1- Calcular perimetro de um quadrado ");
+          printf("\n 2- Rastrear tela");
+          printf("\n 3- Mudar cor de fundo");
+          printf("\n 4- Mudar cor de texto");
+          printf("\n 5- Sair");
+          printf("\n");
+          /*lê opção do usuário*/
+          scanf("%u", &op);
+      /*conforme opção apenas um caso será executado*/
+          switch(op)
+          {
+                     /*chama o calculo do perimetro*/
+                    case 1: printf("\n Digite o tamanho do lado: ");
+                            scanf("%u", &tamanho);
+                            t=periQuad(tamanho);
+                            printf("\n perimetro=\t%d\n",t);
+                            system("pause");
+                            break;
+                   
+                    /*chama a função rastrear*/
+                    case 2: rastrear();
+                            break;
+                    /*parada*/
+                    case 3: mudarCorFundo('A');
+                            break;
+                    /*parada*/
+                    case 4: mudarCorTexto('4');
+                            break;
+                    /*parada*/
+                    case 5: break;
+                    /*caso op seja diferente de 1,2,3 ou 4*/
+                    default:  printf("\n Erro");
+          }/*fim da seleção*/
+      }while(op!=5);
+
+} /*fim*/
