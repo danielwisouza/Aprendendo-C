@@ -57,7 +57,7 @@ void imprime()
      fflush(stdin);//limpa buffer
      scanf("%i",&ind);
      idade = (ANO - p[ind]->anonasc);
-     printf("A pessoa %s tem %i anos de idade",p[ind]->nome,idade);
+     printf("%s: %i anos de idade",p[ind]->nome,idade);
 
 }
 
