@@ -1,0 +1,45 @@
+Tarefa: struct, ponteiro
+1- A partir do programa COLABORADOR, modifique-o e crie 3 funções para acrescentar novas funcionalidades, sendo:
+
+a) uma com parâmetro;
+
+b) uma sem parâmetro;
+
+d) uma que retorne valor;
+
+Usando ponteiro de struct
+
+2- Crie um programa, utilizando um vetor de struct que guarda o nome, RG e ano de nascimento de,no máximo, 10 pessoas. O programa permite as seguintes funcionalidades, conforme escolha do usuário:a - Cadastrar uma pessoa;b - Calcular a idade de uma pessoa selecionada pelo usuário;c - Listar pessoas que nasceram a partir de um determinado ano;d - Listar pessoas que nasceram antes de um determinado ano;e- Encontrar o nome de uma pessoa com determinado RG;s- Sair.O programa deverá ser executado em loop até o usuário digitar a opção s. Implemente funçõespara as opções disponíveis
+
+3-Faça um programa que use uma estrutura para armazenar os atributos de uma circunferência C,isto é, raio e centro. O programa deve permitir as seguintes funcionalidades: a) calcular comprimento da circunferência b) calcular a área do círculo envolto pela circunferência. Use funções.
+
+4 - Usando o programa do WiFi apresentado em aula, melhore-o de forma que ele leia  três roteadores e calcule se algum deles permite que seu sinal seja captado por um dispositivo na posição (x,y)
+
+
+
+5-Uma maternidade deseja cadastrar os nascimentos ocorridos. Usando a linguagem C e struct, implemente:
+
+a) uma função de cadastro capaz de armazenar nome da criança, nome do pai, nome da mãe, dia, mês, ano e hora de nascimento, massa e altura do recém-nascido.
+
+b) uma função que lista os nomes de todos os bebês nascidos em uma determinada data, passada como parâmetro.
+
+c) uma função que lista os nomes de todos os bebês que nasceram com massa abaixo de determinado valor passado como parâmetro;
+
+d)uma função que lista os nomes de todos os bebês que nasceram com massa acima dede determinado valor passado como parâmetro;
+
+e) main(): oferece menu para o usuário escolher a operação desejada.
+
+
+
+6-Uma igreja deseja cadastrar os casamentos ocorridos. Usando a linguagem C e struct, implemente:
+
+a) uma função de cadastro capaz de armazenar nome da noiva, nome do noivo, nomes do pai e da mãe de cada cônjuge, dia, mês, ano e hora da cerimônia.
+
+b) uma função que lista todas as cerimônias ocorridas em uma determinada data, passada como parâmetro.
+
+c) uma função que fornece o nome do futuro cônjuge, a partir do nome de um dos nubentes.
+
+d)  uma função que fornece a data e o horário da cerimônia, a partir dos nomes dos noivos.
+e) main(): oferece menu para o usuário escolher a operação desejada.
+
+ 7-Utilizando a apostila C Descomplicada, investigue e exemplifique por meio de programas o uso de 15 funções da biblioteca string.h.
