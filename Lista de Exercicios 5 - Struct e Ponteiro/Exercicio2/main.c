@@ -16,10 +16,10 @@ typedef struct dado
 PESSOA cadastro[10];//máximo de 10 pessoas
 int controle=0;//quantas pessoas já foram cadastradas
 int ANO;//ano atual
-
+PESSOA *p[MAX];
 void insere()
 {
-    PESSOA *p[MAX];
+
     char no[20],copyRG[10];
     int i, n;
     printf("\nQuantos registros?");
@@ -30,15 +30,15 @@ void insere()
     for (i=0; i<n; i++)
     {
         p[i]=malloc(sizeof(PESSOA));
-        printf("\nDigite nome: ");
+        printf("Digite nome: ");
         fflush(stdin);
         fgets(no,20,stdin);
         strcpy(p[i]->nome,no);
-        printf("\nDigite RG: ");
+        printf("Digite RG: ");
         fflush(stdin);
         fgets(copyRG,10,stdin);
         strcpy(p[i]->rg,no);
-        printf("\nDigite Nascimento");
+        printf("Digite Nascimento: ");
         scanf("%d",&p[i]->anonasc);
     }
 }
@@ -52,14 +52,13 @@ void imprime()
      ANO=2000+((dateStr[6]-48)*10)+((dateStr[7]-48));//ajuste do ano atual
      printf("\nQual pessoa Deseja consultar a idade:\n");
      for(i=0;i<10;i++){
-        printf(" - %i = ",i);
-        printf("%s\n",cadastro[i].nome);
+        printf("%i: %s",i,p[i]->nome);
      }
      printf("\nDigite o numero corespondente ao nome: ");
      fflush(stdin);//limpa buffer
      scanf("%i",&ind);
-     idade = (ANO - cadastro[ind].anonasc);
-     printf("A pessoa %s tem %i anos de idade",cadastro[ind].nome,idade);
+     idade = (ANO - p[ind]->anonasc);
+     printf("A pessoa %s tem %i anos de idade",p[ind]->nome,idade);
 
 }
 
@@ -69,9 +68,9 @@ void listar_ano()
     printf("\nQual ano deseja buscar? ");
     scanf("%i",&busca);
     printf("\nLista de pessoas cadastradas no ano: ");
-    for (i=0;i<10;i++){
-        if (cadastro[i].anonasc>=busca){
-            printf("\n%s",cadastro[i].nome);
+    for (i=0;i<9;i++){
+        if (p[i]->anonasc>=busca){
+            printf("\n%s",p[i]->nome);
         }
     }
 }
@@ -83,8 +82,8 @@ void listar_ano_antes()
     scanf("%i",&busca);
     printf("nLista de pessoas cadastradas no ano: ");
     for (i=0;i<10;i++){
-        if (cadastro[i].anonasc<=busca){
-            printf("\n%s",cadastro[i].nome);
+        if (p[i]->anonasc<=busca){
+            printf("\n%s",p[i]->nome);
         }
     }
 }
@@ -96,10 +95,10 @@ void encontrarRG()
     printf("Digite o RG de busca: ");
     fflush(stdin);//limpa buffer
     gets(copRG);
-    printf("Encontramos os regintes RGs cadastrados: \n");
+    printf("Encontramos os seguintes RGs cadastrados: \n");
     for (i=0;i<10;i++){
-        if (strcmp(copRG,cadastro[i].rg)==1){
-            printf("\n%s",cadastro[i].nome);
+        if (strcmp(copRG,p[i]->rg)==1){
+            printf("\n%s",p[i]->nome);
         }
     }
 }
