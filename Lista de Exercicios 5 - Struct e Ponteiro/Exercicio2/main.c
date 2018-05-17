@@ -92,13 +92,13 @@ void listar_ano_antes()
 void encontrarRG()
 {
     int i;
-    char copyRG[10];
-    printf("Digite o RG de busca: ");
+    char RG2[10];
+    printf("Digite o RG de busca:");
     fflush(stdin);//limpa buffer
-    fgets(copyRG,10,stdin);
+    fgets(RG2,10,stdin);
     printf("\nEncontramos os seguintes RGs cadastrados:");
     for (i=0;i<controle;i++){
-        if (strcmp(copyRG,p[i]->rg)==0){
+        if (strcmp(RG2,(p[i]->rg))==0){
             printf("\n%s",p[i]->nome);
         }
     }
