@@ -40,6 +40,7 @@ void insere()
         strcpy(p[i]->rg,no);
         printf("Digite Nascimento: ");
         scanf("%d",&p[i]->anonasc);
+        controle++;
     }
 }
 
@@ -68,7 +69,7 @@ void listar_ano()
     printf("\nQual ano deseja buscar? ");
     scanf("%i",&busca);
     printf("\nLista de pessoas cadastradas no ano: ");
-    for (i=0;i<9;i++){
+    for (i=0;i<controle;i++){
         if (p[i]->anonasc>=busca){
             printf("\n%s",p[i]->nome);
         }
@@ -80,8 +81,8 @@ void listar_ano_antes()
     int i,busca;
     printf("Qual ano deseja buscar? ");
     scanf("%i",&busca);
-    printf("nLista de pessoas cadastradas no ano: ");
-    for (i=0;i<10;i++){
+    printf("\nLista de pessoas cadastradas no ano: ");
+    for (i=0;i<controle;i++){
         if (p[i]->anonasc<=busca){
             printf("\n%s",p[i]->nome);
         }
@@ -91,13 +92,13 @@ void listar_ano_antes()
 void encontrarRG()
 {
     int i;
-    char copRG[10];
+    char copyRG[10];
     printf("Digite o RG de busca: ");
     fflush(stdin);//limpa buffer
-    gets(copRG);
-    printf("Encontramos os seguintes RGs cadastrados: \n");
-    for (i=0;i<10;i++){
-        if (strcmp(copRG,p[i]->rg)==1){
+    fgets(copyRG,10,stdin);
+    printf("\nEncontramos os seguintes RGs cadastrados:");
+    for (i=0;i<controle;i++){
+        if (strcmp(copyRG,p[i]->rg)==0){
             printf("\n%s",p[i]->nome);
         }
     }
