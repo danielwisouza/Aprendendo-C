@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-
+#define MAX 99999
 typedef struct wifi
 {
     char cor[20];
@@ -13,18 +13,18 @@ typedef struct wifi
 
 WF eq;
 WF tabW[3];
-
+WF *p[MAX];
 void ler_equi()
 {
 
 	printf("\nDigite cor do equipamento:\n");
-	fgets(eq.cor, 20, stdin);
+	fgets(p->cor, 20, stdin);
     printf("\nDigite o raio do equipamento:\n");
-    scanf("%f",&eq.raio);
+    scanf("%f",&p->raio);
     printf("\nDigite a posicao no eixo x:\n");
-    scanf("%f",&eq.xo);
+    scanf("%f",&p->xo);
     printf("\nDigite a posicao no eixo y:\n");
-    scanf("%f",&eq.yo);
+    scanf("%f",&p->yo);
 
 }
 
@@ -52,7 +52,7 @@ void ler_varios()
 
 float calcular_area_Wifi()
 {
-   return(3.14*eq.raio*eq.raio);
+   return(3.14*p->raio*p->raio);
 }
 
 int capta_sinal(float x1, float y1)
@@ -62,7 +62,7 @@ int capta_sinal(float x1, float y1)
     c = eq.yo - y1;
     a = sqrt((b*b) + (c*c));
     printf("\na=%.2f, b=%.2f, c=%.2f",a, b, c);
-    if (a <= eq.raio)return 1;
+    if (a <= p->raio)return 1;
     else return 0;
 }
 
@@ -83,7 +83,6 @@ void sinal_de_3 (float x1, float y1)
         else printf("\n%s, fora da area\n",tabW[i].cor);
     }
 }
-
 int main()
 {
     char op;
@@ -112,7 +111,5 @@ int main()
           default: printf("\nOpcao inválida!\n");
       }
     }while(op != '4');
-
-
     return 0;
 }

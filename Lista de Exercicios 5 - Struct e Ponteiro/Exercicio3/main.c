@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 10000000000000000000000000000000
+#define MAX 100000
 typedef struct dado
 {
         //campos da estrutura

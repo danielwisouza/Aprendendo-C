@@ -43,3 +43,24 @@ d)  uma função que fornece a data e o horário da cerimônia, a partir dos nomes d
 e) main(): oferece menu para o usuário escolher a operação desejada.
 
  7-Utilizando a apostila C Descomplicada, investigue e exemplifique por meio de programas o uso de 15 funções da biblioteca string.h.
+
+1 - Quantas letras 'X' tem a String
+2 - Qual a ultima letra da String 'X'
+3 - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
+#define MAX 1000
 
 typedef struct dados
 {
@@ -18,7 +19,7 @@ typedef struct dados
 
 ARM cadastro[40];
 int controle = 0;
-
+ARM *p[MAX];
 void armazenar()
 {
     char nome[30];
@@ -37,23 +38,23 @@ void armazenar()
     printf("\nDigite o nome do noivo: ");
     fflush(stdin);
     gets(nome);
-    strcpy(cadastro[controle].nomeNoivo,nome);
+    strcpy(p->nomeNoivo,nome);
     printf("\nDigite o nome da Mãe do noivo: ");
     fflush(stdin);
     gets(nome);
-    strcpy(cadastro[controle].maeNoivo,nome);
+    strcpy(p->maeNoivo,nome);
     printf("\nDigite o nome do Pai do noivo: ");
     fflush(stdin);
     gets(nome);
-    strcpy(cadastro[controle].paiNoivo,nome);
+    strcpy(p->paiNoivo,nome);
     printf("\nDigite a data do casamento: ");
     fflush(stdin);
     gets(nome);
-    strcpy(cadastro[controle].data,nome);
+    strcpy(p->data,nome);
     printf("\nDigite a hora do casamento: ");
     fflush(stdin);
     gets(nome);
-    strcpy(cadastro[controle].hora,nome);
+    strcpy(p->hora,nome);
     controle++;
 }
 
@@ -65,8 +66,8 @@ void casamentodata()
     fflush(stdin);
     gets(data);
     for (i = 0; i < controle; ++i){
-        if (strcmp(cadastro[i].data, data) == 0){
-            printf("%s e %s\n", cadastro[i].nomeNoiva, cadastro[i].nomeNoivo);
+        if (strcmp(p->data, data) == 0){
+            printf("%s e %s\n", p->nomeNoiva, p->nomeNoivo);
         }
     }
 }
@@ -79,10 +80,10 @@ void nomenubente()
     fflush(stdin);
     gets(nome);
     for (i = 0; i < controle; ++i){
-        if (strcmp(cadastro[i].nomeNoiva, nome) == 0)
-            printf("%s\n", cadastro[i].nomeNoivo);
-            if (strcmp(cadastro[i].nomeNoivo, nome) == 0)
-                printf("%s\n", cadastro[i].nomeNoiva);
+        if (strcmp(p->nomeNoiva, nome) == 0)
+            printf("%s\n", p->nomeNoivo);
+            if (strcmp(p->nomeNoivo, nome) == 0)
+                printf("%s\n", p->nomeNoiva);
     }
 }
 
@@ -98,9 +99,9 @@ void dataehoracasamento()
     fflush(stdin);
     gets(nome2);
     for (i = 0; i < controle; ++i){
-        if (strcmp(cadastro[i].nomeNoivo, nome1) == 0 && strcmp(cadastro[i].nomeNoiva, nome2) == 0)
-            printf("\n%s\n", cadastro[i].data);
-            printf("\n%s\n", cadastro[i].hora);
+        if (strcmp(p->nomeNoivo, nome1) == 0 && strcmp(p->nomeNoiva, nome2) == 0)
+            printf("\n%s\n", p->data);
+            printf("\n%s\n", p->hora);
     }
 }
 
