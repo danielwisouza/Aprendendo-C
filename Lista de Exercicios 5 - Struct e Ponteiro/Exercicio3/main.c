@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #define MAX 100000
 typedef struct dado
-{
-        //campos da estrutura
+{       //campos da estrutura
          int centro;
          int raio;
 }PESSOA;
