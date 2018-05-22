@@ -19,7 +19,6 @@ int ANO;//ano atual
 PESSOA *p[MAX];
 void insere()
 {
-
     char no[20],copyRG[10];
     int i, n;
     printf("\nQuantos registros?");
@@ -37,13 +36,12 @@ void insere()
         printf("Digite RG: ");
         fflush(stdin);
         fgets(copyRG,10,stdin);
-        strcpy(p[i]->rg,no);
+        strcpy(p[i]->rg,copyRG);
         printf("Digite Nascimento: ");
         scanf("%d",&p[i]->anonasc);
         controle++;
     }
 }
-
 void imprime()
 {
      char dateStr [9];//data no formato dd/mm/aa\0
@@ -59,7 +57,7 @@ void imprime()
      fflush(stdin);//limpa buffer
      scanf("%i",&ind);
      idade = (ANO - p[ind]->anonasc);
-     printf("A pessoa %s tem %i anos de idade",p[ind]->nome,idade);
+     printf("%s: %i anos de idade",p[ind]->nome,idade);
 
 }
 
@@ -75,7 +73,6 @@ void listar_ano()
         }
     }
 }
-
 void listar_ano_antes()
 {
     int i,busca;
@@ -88,7 +85,6 @@ void listar_ano_antes()
         }
     }
 }
-
 void encontrarRG()
 {
     int i;
