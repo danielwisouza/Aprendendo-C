@@ -110,6 +110,16 @@ int main()
     printf(" C - Listar pessoas a partir ano\n");
     printf(" D - Listar pessoas antes ano\n");
     printf(" E - Encontrar pessoa RG\n");
+    printf(" A - Cadastrar uma Pessoa\n");
+    printf(" B - Calcular a Idade\n");
+    printf(" C - Listar pessoas a partir ano\n");
+    printf(" D - Listar pessoas antes ano\n");
+    printf(" E - Encontrar pessoa RG\n");
+    printf(" A - Cadastrar uma Pessoa\n");
+    printf(" B - Calcular a Idade\n");
+    printf(" C - Listar pessoas a partir ano\n");
+    printf(" D - Listar pessoas antes ano\n");
+    printf(" E - Encontrar pessoa RG\n");
     printf(" S - Sair\n");
     printf("Escolha opcao:");
     op=getche();
@@ -117,32 +127,21 @@ int main()
     switch(op)
      {
         case 'a':{system("cls");
-                printf("\nOpcao A Cadastrando Pessoa\n");
-                insere();
                 break;
         }
         case 'b':{system("cls");
-                printf("\nOpcao B Calcular a Idade\n");
-                imprime();
                 break;
         }
         case 'c':{system("cls");
-                printf("\nOpcao C Listar pessoas a partir ano\n");
-                listar_ano();
                 break;
          }
         case 'd':{system("cls");
-                printf("\nOpcao D Listar pessoas antes ano\n");
-                listar_ano_antes();
                 break;
          }
         case 'e':{system("cls");
-                printf("\nOpcao E Encontrar pessoa RG\n");
-                encontrarRG();
                 break;
          }
          case 's':{system("cls");
-                printf("\nSaindo.. ");
                 break;
          }
          default:printf("\nOpcao Incorreta.");
