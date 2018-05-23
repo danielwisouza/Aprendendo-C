@@ -2,76 +2,75 @@
 #include <stdlib.h>
 #include <string.h>
 
-void funcao1(char palavra1,char palavra2){
+void funcao1(char palavra1[],char palavra2[]){
     if(strcmp(palavra1,palavra2)==0){
-        printf("Strings Iguais");
+        printf("Strings Iguais\n");
     }
     else{
-        printf("String diferentes");
+        printf("String diferentes\n");
     }
 }
 
-void funcao2(char palavra1,char palavra2){
-    printf("Palavra 1: %s\n",palavra1);
-    printf("Palavra 1 tem %d letras\n\n",strlen(palavra1));
-    printf("Palavra 2: %s\n",palavra2);
-    printf("Palavra 2 tem %d letras",strlen(palavra2));
+void funcao2(char palavra1[],char palavra2[]){
+    printf("Palavra 1 tem %d letras\n",strlen(palavra1));
+    printf("Palavra 2 tem %d letras\n\n",strlen(palavra2));
 
 }
 
-void funcao3(char palavra1,char palavra2){
-    printf("Agora palavra 1 é igual a palavra 2: %s \n",strcpy(palavra1,palavra2));
-    printf("Agora palavra 2 é igual a palavra a: %s \n",strcpy(palavra2,palavra1));
+void funcao3(char palavra1[],char palavra2[]){
+    printf("Agora palavra 1 e igual a palavra 2: %s \n\n",strcpy(palavra1,palavra2));
 }
 
-void funcao4(char palavra1,char palavra2){
-    printf("Agora palavra 1 foi concatenada com palavra 2: %s",strcat(palavra1,palavra2));
+void funcao4(char palavra1[],char palavra2[]){
+    printf("Agora palavra 1 foi concatenada com palavra 2: %s\n",strcat(palavra1,palavra2));
 }
 
-void funcao5(char palavra1,char palavra2){
+void funcao5(char palavra1[],char palavra2[]){
     int id;
     printf("Palavra 1: %s\n",palavra1);
-    printf("Qual posicao ate %i: ",strlen(palavra1));
-    scanf("&i",id);
+    printf("Qual posicao de 0 ate %i: ",(strlen(palavra1)-1));
+    scanf("%i",&id);
+    printf("O caracter é: %c\n",palavra1[id]);
 
 }
 
-void funcao6(){
+void funcao6(char palavra1[],char palavra2[]){
+	int i;
+	printf("%s",palavra1[-1]);
+}
+
+void funcao7(char palavra1[],char palavra2[]){
 
 }
 
-void funcao7(){
+void funcao8(char palavra1[],char palavra2[]){
 
 }
 
-void funcao8(){
+void funcao9(char palavra1[],char palavra2[]){
+
+}
+void funcao10(char palavra1[],char palavra2[]){
 
 }
 
-void funcao9(){
-
-}
-void funcao10(){
+void funcao11(char palavra1[],char palavra2[]){
 
 }
 
-void funcao11(){
+void funcao12(char palavra1[],char palavra2[]){
 
 }
 
-void funcao12(){
+void funcao13(char palavra1[],char palavra2[]){
 
 }
 
-void funcao13(){
+void funcao14(char palavra1[],char palavra2[]){
 
 }
 
-void funcao14(){
-
-}
-
-void funcao15(){
+void funcao15(char palavra1[],char palavra2[]){
 
 }
 
@@ -88,6 +87,7 @@ int main()
     system("cls");
     char op;
     do{
+
     printf("Palavra 1: %s\n",palavra1);
     printf("Palavra 2: %s\n",palavra2);
     printf("\nMENU DE OPCOES\n");
