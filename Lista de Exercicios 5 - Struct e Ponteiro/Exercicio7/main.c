@@ -35,42 +35,80 @@ void funcao5(char palavra1[],char palavra2[]){
 }
 
 void funcao6(char palavra1[],char palavra2[]){
-	int i;
-	printf("%s",palavra1[-1]);
+	char *pdest;
+	pdest = memccpy(palavra1,palavra2,'c',45);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 }
 
 void funcao7(char palavra1[],char palavra2[]){
+    char *pdest;
+	pdest = memmove(palavra1,palavra2,4);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 
 void funcao8(char palavra1[],char palavra2[]){
+    char *pdest;
+	pdest = memccpy(palavra1,palavra2,4,3);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 
 void funcao9(char palavra1[],char palavra2[]){
+    char *pdest;
+	pdest = strncat(palavra1,palavra2,5);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 void funcao10(char palavra1[],char palavra2[]){
+    char *pdest;
+	pdest = memchr(palavra1,palavra2,3);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 
 void funcao11(char palavra1[],char palavra2[]){
+    char *pdest;
+	pdest = strchr(palavra1,4);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 
 void funcao12(char palavra1[],char palavra2[]){
+    char *pdest;
+	pdest = strcspn(palavra1,palavra2);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 
 void funcao13(char palavra1[],char palavra2[]){
+    char *pdest;
+	pdest = strspn(palavra1,palavra2);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 
 void funcao14(char palavra1[],char palavra2[]){
+    char *pdest;
+	//pdest = strtod(palavra1,palavra2);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 
 void funcao15(char palavra1[],char palavra2[]){
+    char *pdest;
+	pdest =  memset(palavra1,4,2);
+	printf( "Result: %s\n",palavra1);
+    printf( "Length: %d characters\n", strlen(palavra1));
 
 }
 
@@ -96,16 +134,16 @@ int main()
     printf(" C - Substituir 1 por 2\n");
     printf(" D - Concatenar\n");
     printf(" E - Buscar item Palavra 1\n");
-    printf(" F - \n");
-    printf(" G - \n");
-    printf(" H - \n");
-    printf(" I - \n");
-    printf(" J - \n");
-    printf(" K - \n");
-    printf(" L - \n");
-    printf(" M - \n");
-    printf(" N - \n");
-    printf(" O - \n");
+    printf(" F - Copia de bloco de memoria\n");
+    printf(" G - Move bloco de memoria\n");
+    printf(" H - Compara dois blocos de memoria\n");
+    printf(" I - Adiciona “n” caracteres de uma string\n");
+    printf(" J - Localiza caractere em bloco de memoria\n");
+    printf(" K - Localiza primeira ocorrencia de caractere\n");
+    printf(" L - Retorna o numero de caracteres lidos antes da ocorrencia\n");
+    printf(" M - Retorna o comprimento da string");
+    printf(" N - Divide uma string em sub-strings com base em um caractere\n");
+    printf(" O - Preenche bloco de memoria com valor especificado\n");
     printf(" S - Sair\n");
     printf("Escolha opcao:");
     op=getche();
