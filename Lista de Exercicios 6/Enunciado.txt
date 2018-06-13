@@ -30,20 +30,6 @@ b) Existem ponteiros neste trecho de código? Explique.
 
 3- Usando a função char *dia_semana(int n) apresentada no item anterior, implemente um programa que simule um calendário permanente, isto é, o usuário digitará uma data e o programa retornará o dia da semana correspondente àquela data digitada. Adapte o código que você fez para a lista anterior de exercícios.
 
-1 - Janeiro 31 dias
-2 - Fevereiro tem 28 dias durante um ano normal e 29 em anos bissextos.
-3 - março 31 dias
-4 - Abril 30 dias
-5 - maio 31 dias
-6 - junho 30 dias
-7 - julho 31 dias
-8 - agosto 31 dias
-9 - setembro 30 dias
-10 - outubro 31 dias
-11 - novembro 30 dias
-12 - dezembro 31 dias
-
-
 4 -Faça um programa, usando lista encadeada, de forma que possam ser cadastradas quantas pessoas o usuário desejar. Deverão ser cadastrados os seguintes dados: nome, RG e ano de nascimento. O programa permite as seguintes funcionalidades, conforme escolha do usuário:
 
 a) -  Cadastrar uma pessoa;
