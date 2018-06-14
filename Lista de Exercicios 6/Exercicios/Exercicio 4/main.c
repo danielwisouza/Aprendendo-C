@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#define ANO 2017
-
+/**/
 // definição de um novo tipo
 typedef struct dado
 {
@@ -14,31 +13,31 @@ typedef struct dado
          struct dado *prox;
 }*PESSOA;
 
-void insere(PESSOA *p)
+void insere(PESSOA *p,char nome2[], char rg2[], char anonasc2)
 {
-     char nome1[20];
-     char rg1[10];
-     int anonasc1;
-     printf("\nDigite nome\n");
-     fflush(stdin);
-     gets(nome1);
-     printf("\nDigite RG\n");
-     fflush(stdin);
-     gets(rg1);
-     printf("\nDigite ano de nascimento\n");
-     scanf("%d",&anonasc1);
      PESSOA ser=malloc(sizeof(struct dado));
      if(ser!=NULL)
      {
-          strcpy(ser->nome,nome1);
-          strcpy(ser->rg,rg1);
-          ser->anonasc=anonasc1;
+          strcpy(ser->nome,nome2);
+          strcpy(ser->rg,rg2);
+          ser->anonasc=anonasc2;
           ser->prox=*p;
           *p=ser;
      }
 }
 
+void imprime(PESSOA p)
+{
+     printf("\n**** imprimindo lista atualizada***\n");
+     while (p!=NULL)
+     {
+           printf("Nome: %s\t",p->nome);
+           printf("RG: %s\t",p->rg);
+           printf("Ano Nascimento:%d\n",p->anonasc);
+           p=p->prox;
+     }
 
+}
 /*
 void imprime()
 {
@@ -105,6 +104,9 @@ int main()
 {
     PESSOA cadastro=NULL;
     PESSOA bkp=NULL;
+    char nome1[20];
+    char rg1[10];
+    int anonasc1;
     //Inicio meu switch case
     char op;
     do{
@@ -122,7 +124,16 @@ int main()
      {
         case 'a':{system("cls");
                 printf("\nOpcao A Cadastrando Pessoa\n");
-                insere(&bkp->prox);
+                printf("\nDigite nome\n");
+                fflush(stdin);
+                gets(nome1);
+                printf("\nDigite RG\n");
+                fflush(stdin);
+                gets(rg1);
+                printf("\nDigite ano de nascimento\n");
+                scanf("%d",&anonasc1);
+                insere(&cadastro,nome1,rg1,anonasc1);
+                imprime(cadastro);
                 break;
         }
         case 'b':{system("cls");
