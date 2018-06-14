@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#define ANO 2018
 /**/
 // definição de um novo tipo
 typedef struct dado
@@ -13,14 +14,16 @@ typedef struct dado
          struct dado *prox;
 }*PESSOA;
 
-void insere(PESSOA *p,char nome2[], char rg2[], char anonasc2)
+void insere(PESSOA *p,char nome1[], char rg1[], char anonasc1)
 {
+
      PESSOA ser=malloc(sizeof(struct dado));
      if(ser!=NULL)
      {
-          strcpy(ser->nome,nome2);
-          strcpy(ser->rg,rg2);
-          ser->anonasc=anonasc2;
+
+          strcpy(ser->nome,nome1);
+          strcpy(ser->rg,rg1);
+          ser->anonasc=anonasc1;
           ser->prox=*p;
           *p=ser;
      }
@@ -39,39 +42,46 @@ void imprime(PESSOA p)
 
 }
 /*
-void imprime()
+void imprimirPessoaIdade(PESSOA p)
 {
-     char dateStr [9];//data no formato dd/mm/aa\0
-     int i,idade;
-     int ind;
-     _strdate(dateStr);//chamada de uma função da biblioteca time.h
-     ANO=2000+((dateStr[6]-48)*10)+((dateStr[7]-48));//ajuste do ano atual
-     printf("\nQual pessoa Deseja consultar a idade:\n");
-     for(i=0;i<10;i++){
-        printf(" - %i = ",i);
-        printf("%s\n",cadastro[i].nome);
-     }
-     printf("\nDigite o numero corespondente ao nome: ");
-     fflush(stdin);//limpa buffer
-     scanf("%i",&ind);
-     idade = (ANO - cadastro[ind].anonasc);
-     printf("A pessoa %s tem %i anos de idade",cadastro[ind].nome,idade);
+    char nome3[20];
+    printf("Escolha uma da pessoas abaixo: \n\n");
+    while (p!=NULL)
+    {
+        printf("%s\t",p->nome);
+        p=p->prox;
+    }
+    printf("\n\nDigite o nome que deseja consultar a idade: ");
+    fflush(stdin);
+    gets(nome3);
+    while (p!=NULL)
+    {
+        if (strcmp(nome3,p->nome) == 0){
+        printf("nome: %s\t",p-> nome);
+        printf("idade:%d\n",ANO - (p->anonasc));
+        }
+        p=p->prox;
+    }
+
 
 }
+*/
 
-void listar_ano()
+void listar_ano(PESSOA p)
 {
     int i,busca;
-    printf("\nQual ano deseja buscar? ");
+    printf("\nA partir de qual ano deseja buscar? ");
     scanf("%i",&busca);
     printf("\nLista de pessoas cadastradas no ano: ");
-    for (i=0;i<10;i++){
-        if (cadastro[i].anonasc>=busca){
-            printf("\n%s",cadastro[i].nome);
+    while (p!=NULL)
+    {
+        if (p->anonasc >= busca){
+            printf("Nome: %s\t",p->nome);
+            printf("idade:%d\n",ANO - (p->anonasc));
         }
     }
 }
-
+/*
 void listar_ano_antes()
 {
     int i,busca;
@@ -106,16 +116,16 @@ int main()
     PESSOA bkp=NULL;
     char nome1[20];
     char rg1[10];
-    int anonasc1;
+    int anonasc1=0;
     //Inicio meu switch case
     char op;
     do{
     printf("\nMENU DE OPCOES\n");
     printf(" A - Cadastrar uma Pessoa\n");
-    printf(" B - Calcular a Idade\n");
+    printf(" B - Calcular a Idade pessoa selecionada\n");
     printf(" C - Listar pessoas a partir ano\n");
     printf(" D - Listar pessoas antes ano\n");
-    printf(" E - Encontrar pessoa RG\n");
+    printf(" E - Encontrar pessoa por RG\n");
     printf(" S - Sair\n");
     printf("Escolha opcao: ");
     op=getche();
@@ -134,11 +144,12 @@ int main()
                 scanf("%d",&anonasc1);
                 insere(&cadastro,nome1,rg1,anonasc1);
                 imprime(cadastro);
+
                 break;
         }
         case 'b':{system("cls");
                 printf("\nOpcao B Calcular a Idade\n");
-
+                imprime(cadastro);
                 break;
         }
         case 'c':{system("cls");
