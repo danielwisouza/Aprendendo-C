@@ -14,7 +14,7 @@ typedef struct dado
          struct dado *prox;
 }*PESSOA;
 
-void insere(PESSOA *p,char nome1[], char rg1[], char anonasc1)
+void insere(PESSOA *p,char nome1[], char rg1[], int anonasc1)
 {
 
      PESSOA ser=malloc(sizeof(struct dado));
