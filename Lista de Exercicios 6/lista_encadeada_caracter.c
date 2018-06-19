@@ -14,11 +14,11 @@ void inserir(lista *p, char x)
   n->item=x;
   n->prox=*p;
   *p=n;
-  
+
   }
 }
 
- void remover(lista *p)
+void remover(lista *p)
 {
  lista n=*p;
  if(n==NULL)return;
@@ -53,8 +53,8 @@ main()
  char letra;
  int op,pos;
  do {
-     
-         
+
+
          printf("\n1-inserir\t2-remover\t3-listar\n4-sair\t5-inserir depois da posicao i\t6-limpar tela\n");
          scanf("%d",&op);
          switch(op)
@@ -83,7 +83,7 @@ main()
      } while (op!=4);
  getch();
 }
-     
- 
- 
+
+
+
 
