@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#define ANO 2017
+#define ANO 2018
 
-// definição de um novo tipo
 typedef struct dado
 {
         //campos da estrutura
@@ -14,14 +13,16 @@ typedef struct dado
          struct dado *prox;
 }*PESSOA;
 
-void insere(PESSOA *p, char nome2[20], char rg2[10],int anonasc2)
+void insere(PESSOA *p,char nome1[], char rg1[], int anonasc1)
 {
+
      PESSOA ser=malloc(sizeof(struct dado));
      if(ser!=NULL)
      {
-          strcpy(ser->nome,nome2);
-          strcpy(ser->rg,rg2);
-          ser->anonasc=anonasc2;
+
+          strcpy(ser->nome,nome1);
+          strcpy(ser->rg,rg1);
+          ser->anonasc=anonasc1;
           ser->prox=*p;
           *p=ser;
      }
@@ -41,17 +42,17 @@ void imprimeIdade(PESSOA p)
 }
 void imprimeAnoDepois(PESSOA p){
     int anonascimeto;
-    printf("Digite apartir de qual ano quer exibir as pessoas: ");
+    printf("A partir de qual ano quer exibir as pessoas: ");
     scanf("%i",&anonascimeto);
     while (p!=NULL)
     {
         if (p->anonasc>=anonascimeto){
             printf("nome: %s\t",p-> nome);
-            printf("idade:%d\n",ANO - (p->anonasc));
         }
         p=p->prox;
     }
 }
+
 void imprimeAnoAntes(PESSOA p){
     int anonascimeto;
     printf("Digite apartir de qual ano quer exibir as pessoas: ");
@@ -85,15 +86,17 @@ int main()
 {
     PESSOA cadastro=NULL;
     PESSOA bkp=NULL;
-    //Inicio meu switch case
+    char nome1[20];
+    char rg1[10];
+    int anonasc1=0;
     char op;
     do{
     printf("\nMENU DE OPCOES\n");
     printf(" A - Cadastrar uma Pessoa\n");
-    printf(" B - Calcular a Idade\n");
+    printf(" B - Calcular a Idade pessoa selecionada\n");
     printf(" C - Listar pessoas a partir ano\n");
     printf(" D - Listar pessoas antes ano\n");
-    printf(" E - Encontrar pessoa RG\n");
+    printf(" E - Encontrar pessoa por RG\n");
     printf(" S - Sair\n");
     printf("Escolha opcao: ");
     op=getche();
@@ -115,7 +118,6 @@ int main()
                 scanf("%d",&anonasc1);
                 insere(&cadastro,nome1,rg1,anonasc1);
         }
-
         case 'teste':{system("cls");
                 printf("\nOpcao B Calcular a Idade\n");
                 break;
