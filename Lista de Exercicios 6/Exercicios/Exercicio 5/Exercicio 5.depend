@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1529542145 source:c:\users\danielwilliansignaci\documents\projetos git\aprendendo-c\lista de exercicios 6\exercicios\exercicio 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+

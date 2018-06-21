@@ -32,6 +32,7 @@ void insere(PESSOA *p, int numero_voo1,char ciaAerea1[],char Modelo_Aeronave1[],
           ser->qtdeAssentosOcupados=qtdeAssentosOcupados1;
           ser->prox=*p;
           *p=ser;
+
      }
 }
 
@@ -76,28 +77,59 @@ void reservarAcento(PESSOA p)
     }
 }
 
-
-void cancelarVoo(PESSOA *p){
+PESSOA cancelarVoo(PESSOA p)
+{
     int codVoo;
+    PESSOA backup= p;
+    PESSOA aux= p;
     printf("Qual voo deseja excluir: ");
-    scanf("%i",codVoo);
-    //while (p!=NULL);
-        //if(codVoo==p->numero_voo){
-          //  free(p);
-          //  return;
-        //}
-    //p=p->prox;
-    PESSOA n=*p;
-    if(n==NULL)return;
-    *p=n->prox;
-    free(n);
+    scanf("%i",&codVoo);
+    while(aux!=NULL)
+      {
+        if (codVoo==aux->numero_voo){
+            if (aux==p){
+                p=p->prox;
+            }
+            else{
+                backup->prox = aux->prox;
+            }
+        }
+        backup=aux;
+        aux=aux->prox;
+      }
+      return p;
+}
 
+void cancelarPassagem(PESSOA p)
+{
+    int codVoo=0;
+    int passagem=0;
+    int assentosDisponievis;
+    printf("Qual numero do voo que deseja reservar: ");
+    scanf("%i",&codVoo);
+    printf("Quantos passagens deseja cancelar: ");
+    scanf("%i",&passagem);
+    while (p!=NULL)
+    {
+        assentosDisponievis = (p->qtdeTotalAssentos - p->qtdeAssentosOcupados);
+        if (codVoo==p->numero_voo){
+            if (passagem <= assentosDisponievis){
+                p->qtdeAssentosOcupados= p->qtdeAssentosOcupados + passagem;
+                printf("Reserva realizada com sucesso.. ");
+            }
+            else{
+                printf("Voo Lotado temos %i de vagas disponiveis",assentosDisponievis);
+            }
+        }
+        p=p->prox;
+    }
 }
 
 int main()
 {
     PESSOA cadastro=NULL;
     PESSOA bkp=NULL;
+    int poss;
     int numero_voo1;
     char ciaAerea1 [20];
     char Modelo_Aeronave1 [20];
@@ -159,11 +191,12 @@ int main()
          }
         case 'd':{system("cls");
                 printf("\nOpcao D - Cancelar Voo\n");
-                cancelarVoo(&cadastro);
+                cadastro = cancelarVoo(cadastro);
                 break;
          }
         case 'e':{system("cls");
                 printf("\nOpcao E - Cancelar passagem\n");
+                cancelarPassagem(cadastro);
                 break;
          }
          case 's':{system("cls");
