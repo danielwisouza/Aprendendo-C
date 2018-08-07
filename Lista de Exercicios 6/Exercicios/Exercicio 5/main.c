@@ -111,14 +111,10 @@ void cancelarPassagem(PESSOA p)
     scanf("%i",&passagem);
     while (p!=NULL)
     {
-        assentosDisponievis = (p->qtdeTotalAssentos - p->qtdeAssentosOcupados);
         if (codVoo==p->numero_voo){
-            if (passagem <= assentosDisponievis){
-                p->qtdeAssentosOcupados= p->qtdeAssentosOcupados + passagem;
+            if (passagem <= p->qtdeTotalAssentos){
+                p->qtdeAssentosOcupados= p->qtdeAssentosOcupados - passagem;
                 printf("Reserva realizada com sucesso.. ");
-            }
-            else{
-                printf("Voo Lotado temos %i de vagas disponiveis",assentosDisponievis);
             }
         }
         p=p->prox;

@@ -73,6 +73,38 @@ void imprime(PESSOA p)
      }
 
 }
+
+
+void inverteSequencia(PESSOA p)
+{
+    int cadastro;
+    int i=0;
+    int cont;
+    char lista[cadastro];
+    while(p != NULL){
+        lista[cadastro]=p->nome;
+        p=p->prox;
+        i=i+1;
+    }
+    printf("************** Inverter -------------");
+    cont=i;
+    while (cont!=0){
+        printf("\n%c",lista[cont]);
+        cont=cont-1;
+    }
+}
+
+int contagem(char frase[])
+{
+    int i=0,espaco=0;
+    for (i=0;i<=strlen(frase);i++){
+        if (frase[i]=='/0'){
+            espaco++;
+        }
+    }
+    return espaco;
+}
+
 /*função principal*/
 int main ()
 {
@@ -80,6 +112,7 @@ int main ()
      char x[20]={"mirela"};
      int i=1970;
      PESSOA bkp=NULL;
+     char frase[100];
      char op='s';
      // insere dados para testes
      do
@@ -98,7 +131,12 @@ int main ()
          insere2(&bkp->prox);
          printf("Deseja continuar? s/n");
          op=getch();
+         printf("\nAgora digite uma frase qualquer: ");
+         fflush(stdin);
+         gets(frase);
+         printf("\nSua frase tem %i espacos em branco",contagem(frase));
      }
+     inverteSequencia(cadastro);
      // imprime a lista
      imprime(cadastro);
      //acessa a posição 2
