@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 typedef struct celula{
+    int valor;
     struct celula *seg;
 }celula;
 
@@ -11,20 +12,24 @@ int validaPalindrome(char v[]){
     celula *c = malloc(sizeof(celula));
     c->seg=NULL;
     int meio = (n/2);
+    printf("n %i",n);
+    printf("\nMeio %i",meio);
     for (i=0;i<=meio;i++){
-        celula->seg = v[i];
+        //c->valor = v[i];
+        c->seg = v[i];
+        c->seg = c;
     };
-    if ((n%2) meio++){
+    if (n%2)(meio=meio+1);{
         for (i=meio;i<n;i++)
-            if celula->seg!=V[i];
+            if (c->seg!=v[i]);
                 return 0;
+        printf("SIM");
         return 1;
     };
 }
-
 int main()
 {
     char v[]={"ANA"};
-    printf("%i",validaPalindrome());
+    printf("\nResposta: %i",validaPalindrome(v));
     return 0;
 }
