@@ -2,9 +2,8 @@
 #include <stdlib.h>
 
 // O algoritomo tem qye receber a quantodade total de um determinado produto e seu preço
-// Apos recber deve registar retirade de veda simutando um estoque que atualmente é felito em um cadenio de papel
+// Apos receber deve registar retirade de veda simutando um estoque que atualmente é felito em um cadenio de papel
 // Para isso utilizarem uma lista encadeada para fazer os registors e um afunção que realiza a retidada
-
 
 typedef struct dado
 {
@@ -17,17 +16,14 @@ typedef struct dado
 
 void insere(PRODUTO *p,int codigo, char nome[],int quantidade,float preco)
 {
-
      PRODUTO ser=malloc(sizeof(struct dado));
      if(ser!=NULL)
      {
-
           ser->codigo=codigo;
           strcpy(ser->nome,nome);
           ser->preco=preco;
           ser->quantidade=quantidade;
           ser->prox=*p;
-
           *p=ser;
      }
 }
@@ -35,10 +31,27 @@ void insere(PRODUTO *p,int codigo, char nome[],int quantidade,float preco)
 void imprime(PRODUTO p){
     while (p!=NULL)
     {
-        printf("Cod: %i | Prod: %s | Quant: %i| Valor Unitario: %f \n",p->codigo,p->nome,p->quantidade,p->preco);
+        printf("Cod: %i | Prod: %s | Quant: %i| Valor Unitario: %2.f \n",p->codigo,p->nome,p->quantidade,p->preco);
         p=p->prox;
     }
 }
+
+void vendaProduto(PRODUTO p){
+    int cod;
+    int quant;
+    printf("Digite o codigo do Produto: ");
+    scanf("%i",&cod);
+    printf("\nDigite a quantidade de produtos: ");
+    scanf("%i",&quant);
+    while (p!=NULL)
+    {
+        if ((cod == p->codigo)){
+            p->quantidade=(p->quantidade-quant);
+        }
+        p=p->prox;
+    }
+}
+
 int main()
 {
     PRODUTO cadastro=NULL;
@@ -80,6 +93,7 @@ int main()
          }
         case 'c':{system("cls");
                 printf("\nOpcao C Venda Poduto Codigo\n");
+                vendaProduto(cadastro);
                 break;
          }
 

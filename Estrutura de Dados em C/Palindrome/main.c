@@ -29,7 +29,7 @@ int validaPalindrome(char v[]){
 }
 int main()
 {
-    char v[]={"ANA"};
+    char v[]={"ANAa"};
     printf("\nResposta: %i",validaPalindrome(v));
     return 0;
 }
