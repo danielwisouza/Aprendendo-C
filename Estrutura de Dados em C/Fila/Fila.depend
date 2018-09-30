@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1538315773 source:c:\users\danielwilliansignaci\documents\github - projetos\aprendendo-c\estrutura de dados em c\fila\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
